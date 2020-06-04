@@ -18,7 +18,7 @@ def produtos_disp(tabela):
 
     server = '192.168.2.11'
     db = 'ondas800'
-    user = 'sa'
+    user = 'timur'
     pwd = 'p$3dasony' 
     conn = pyodbc.connect('DRIVER='+ DRIVER +';SERVER=' + server + ';DATABASE=' + db + ';UID=' + user + ';PWD=' + pwd)
     
