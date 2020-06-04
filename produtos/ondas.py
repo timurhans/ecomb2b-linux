@@ -5,6 +5,7 @@ import glob
 
 COLECOES = "('2001','1902','1901')"
 COLECAO_ATUAL = '2001'
+DRIVER = '{ODBC Driver 17 for SQL Server}'
 
 class Produto:
     pass
@@ -19,7 +20,7 @@ def produtos_disp(tabela):
     db = 'ondas800'
     user = 'sa'
     pwd = 'p$3dasony' 
-    conn = pyodbc.connect('DRIVER={SQL Server};SERVER=' + server + ';DATABASE=' + db + ';UID=' + user + ';PWD=' + pwd)
+    conn = pyodbc.connect('DRIVER='+ DRIVER +';SERVER=' + server + ';DATABASE=' + db + ';UID=' + user + ';PWD=' + pwd)
     
     query = """
         select
@@ -252,7 +253,7 @@ def cats_subcats():
         db = 'ondas800'
         user = 'timur'
         pwd = 'p$3dasony' 
-        conn = pyodbc.connect('DRIVER={SQL Server};SERVER=' + server + ';DATABASE=' + db + ';UID=' + user + ';PWD=' + pwd)
+        conn = pyodbc.connect('DRIVER='+ DRIVER +';SERVER=' + server + ';DATABASE=' + db + ';UID=' + user + ';PWD=' + pwd)
 
         query = """
             select distinct pc.CATEGORIA_PRODUTO, psc.SUBCATEGORIA_PRODUTO 
