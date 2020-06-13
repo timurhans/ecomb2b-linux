@@ -199,8 +199,9 @@ def df_tolist(prods):
         
         
         prod_ant = row['PRODUTO']
-
-    lista_produtos.sort(reverse=True,key=sort_func)
+    
+    #lista_produtos.sort(reverse=True,key=sort_func)
+    lista_produtos = sorted(lista_produtos, key = lambda x: (x.subcategoria,x.produto, -x.estoque_tot))
 
     return lista_produtos
 
