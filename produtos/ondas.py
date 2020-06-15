@@ -114,7 +114,7 @@ def produtos_disp(tabela):
          prods['D5'] + prods['D6'] + prods['D7']+prods['D8']+prods['D9']
          +prods['D10']+prods['D11']+prods['D12'])
     
-    prods = prods[(prods['DISP'] > 5)]
+    prods = prods[(prods['DISP'] > 0)]
     
     
 
