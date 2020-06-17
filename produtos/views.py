@@ -14,7 +14,7 @@ COLECOES = ['2001','Saldos']
 def product_list_view_drop(request):
 
     page_size = 12
-
+    print(request.COOKIES)
     if request.user.is_authenticated:
 
 
